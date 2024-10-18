@@ -10,14 +10,14 @@
     justify-content: space-around;
     height:60px;
     background-color: #0f1111;
-    color: red;
+    color: white;
 }
 .nav-logo{
     height: 50px;
     width: 113px;
 }
 .logo{
-    background-image: url(..logo.jpg);
+    background-image: url(new logo.jpg);
     height: 50px;
     width: 100%;
     background-size: cover;
