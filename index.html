@@ -6,47 +6,47 @@
     <title>Ecommerce Gadget Guru</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
+    <script src="chatbot.js" defer></script>
+
 </head>
 <body>
     <header>
     <div class="navbar">
         <div class="nav-logo">
-            <div class="logo"></div>
+            <div class="logo">
+                <img src="logo.jpg" alt="Gadgetguru logo" height="50px">
+            </div>
         </div>
 
         <div class="nav-address">
             <p class="add-first">Deliever to</p>
             <div class="add-icon">
                 <i class="fa-solid fa-location-dot"></i>
-                <p class="add-second">India</p>
+                <p class="add-second">Delhi</p>
             </div>
         </div>
 
-        <div class="nav-search">
-            <select class="search-select">
-                <option>All</option>
-            </select>
-            <input placeholder="Search Amazon"class="search-input">
-            <div class="search-icon">
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </div>
-        </div>
-
-        <div class="nav-signin">
-            <p class="nav-first">Hello,sign in</p>
-            <p class="nav-second">Account & Lists</p>
-        </div>
 
         <div class="nav-return">
-            <p class="nav-first">Returns</p>
-            <p class="nav-second">& Orders</p>
+            <p class="nav-second">Orders</p>
         </div>
 
         <div class="nav-cart">
             <i class="fa-solid fa-cart-shopping"></i>
             Cart
         </div>
+        
+        <div class="nav-search">
+            <select class="search-select">
+                <option>All</option>
+            </select>
+            <input placeholder="Search for electronic gadgets"class="search-input">
+            <div class="search-icon">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+        </div>
     </div>
+    
 
     <div class="panel">
         <div class="panel-all">
@@ -55,10 +55,7 @@
         </div>
         <div class="panel-options">
             <p>Toady's Deal</p>
-            <p>Customer Service</p>
-            <p>Registry</p>
             <p>Gift Cards</p>
-            <p>Sell</p>
         </div>
         <div class="panel-deals">
             Shop deals in Electronics
@@ -68,8 +65,10 @@
 
 <div class="hero-section">
     <div class="hero-message">
-        <p>You are on amazon.com.You can also shop on Gadget GuruIndia for millions of products with fast local delivery.
-            <a>Click here to go to amazon.in</a>
+        <p>
+            This website is completely for buying electronic Gadget
+        </p>
+            <a>Click here to go to amazon.in / flipkart.in</a>
         </p>
     </div>
 </div>
@@ -78,52 +77,56 @@
     <div class="box1 box">
         <div class="box-content">
         <h2>Mouse</h2>
-        <div class="box-image" style="background-image: url('mouse.webp');"></div>
+        <div class="box-image" style="background-image: url('mouse.jpeg');"></div>
         <p>See more</p>
         </div>
     </div>
     <div class="box2 box"><div class="box-content">
         <h2>Moniter</h2>
-        <div class="box-image" style="background-image: url('moniter.webp');"></div>
+        <div class="box-image" style="background-image: url('moniter.jpeg');"></div>
         <p>See more</p>
         </div></div>
     <div class="box3 box"><div class="box-content">
         <h2>Keyboard</h2>
-        <div class="box-image" style="background-image: url('keyboard.webp');"></div>
+        <div class="box-image" style="background-image: url('keyboard.jpeg');"></div>
         <p>See more</p>
         </div></div>
     <div class="box4 box"><div class="box-content">
         <h2>CPU</h2>
-        <div class="box-image" style="background-image: url('cpu.webp');"></div>
+        <div class="box-image" style="background-image: url('cpu.jpeg');"></div>
         <p>See more</p>
         </div></div>
     <div class="box4 box"><div class="box-content">
         <h2>Wifi Card</h2>
-        <div class="box-image" style="background-image: url('wifi\ card.webp');"></div>
+        <div class="box-image" style="background-image: url('wifi\ card.jpeg');"></div>
         <p>See more</p>
         </div></div>
     <div class="box4 box"><div class="box-content">
         <h2>Power Supply Unit</h2>
-        <div class="box-image" style="background-image: url('psu.webp');"></div>
+        <div class="box-image" style="background-image: url('psu.jpeg');"></div>
         <p>See more</p>
         </div></div> 
     <div class="box4 box"><div class="box-content">
         <h2>Pc cabinat</h2>
-        <div class="box-image" style="background-image: url('pc\ cabinat.webp');"></div>
+        <div class="box-image" style="background-image: url('pc\ cabinet.jpeg');"></div>
         <p>See more</p>
         </div></div>
     <div class="box4 box"><div class="box-content">
         <h2>Graphic Card</h2>
-        <div class="box-image" style="background-image: url('graphic\ card.webp');"></div>
+        <div class="box-image" style="background-image: url('graphic\ card.jpeg');"></div>
         <p>See more</p>
         </div></div>   
 </div>
 <br><hr>
 <div class="sign-in">
-    <p>See personalized recommendations</p>
     <button>Sign in</button>
     <p class ="customer">New customer?<a>Start here.</a></p>
 </div>
+<button id="chatbotButton" onclick="toggleChat()">Chat with Us!</button>
+<div id="chatContainer" class="chat-hidden">
+  <iframe src="your-chatbot-url" width="300" height="400"></iframe>
+</div>
+
 <hr>
 
 
@@ -131,39 +134,22 @@
     <div class="foot-panel1">Back to Top</div>
     <div class="foot-panel2">
         <ul>
-            <p>Get to Know Us</p>
-            <a>Careers</a>
             <a>Blog</a>
             <a>About Gadget Guru</a>
         </ul>
         <ul>
-            <p>Make Money with Us</p>
-            <a>Sell on Gadget GuruBusiness</a>
             <a>Advertise your Products</a>
-            <a>Self-Publish with Us</a>
             <a>Host an Gadget GuruHub</a>
-            <a>See More and Make</a>
         </ul>
         <ul>
-            <p>Gadget GuruPayment Products</p>
-            <a>Gadget GuruBusiness Card</a>
-            <a>Shop with Points</a>
-            <a>Reload Your Balance</a>
-            <a>Gadget GuruCurrency Converter</a>
-        </ul>
-        <ul>
-            <p>Let Us Help You</p>
-            <a>Gadget Guruand Covid-19</a>
             <a>Your Account</a>
             <a>Yours Orders</a>
-            <a>Returns & Replacements</a>
-            <a>Gadget GuruAssistant</a>
             <a>Help</a>
         </ul>
     </div>
         </div>
     </div>
-        <div class="copyright"><i class="fa-solid fa-copyright"></i></div>
+        <div class="copyright"><i class="fa-solid fa-copyright">All right reserved</i></div>
     </div>
 </footer>
 </body>
