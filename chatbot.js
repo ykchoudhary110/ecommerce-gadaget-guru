@@ -169,9 +169,9 @@ function confirmSelection(item, price, usage) {
   recommendationMessage.style.margin = '10px';
   chatContainer.appendChild(recommendationMessage);
 
-  // Add product description based on price range (example)
+  // Add product description based on price range
   const description = document.createElement('div');
-  description.textContent = `This ${item} in the ₹${price} range is great for ${usage.toLowerCase()} tasks, offering a balance between performance and value.`;
+  description.textContent = getRecommendationComment(item, price, usage);
   description.style.padding = '10px';
   description.style.backgroundColor = '#f8f9fa';
   description.style.margin = '10px';
@@ -190,4 +190,14 @@ function confirmSelection(item, price, usage) {
     window.open(`https://www.amazon.in/s?k=${item}`, "_blank");
   };
   chatContainer.appendChild(purchaseButton);
+}
+
+// Helper function to generate unique recommendations for every selection
+function getRecommendationComment(item, price, usage) {
+  const comments = {
+    Performance: `This ${item} in the ₹${price} range delivers top-notch performance for demanding tasks and intensive use.`,
+    Professional: `Ideal for professionals, this ${item} is tailored for reliability and efficient workflows in the ₹${price} range.`,
+    Normal: `A budget-friendly option, this ${item} is perfect for everyday use and casual tasks in the ₹${price} range.`
+  };
+  return comments[usage] || "Great choice!";
 }
